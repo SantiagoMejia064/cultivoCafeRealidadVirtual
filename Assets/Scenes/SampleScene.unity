@@ -5966,9 +5966,10 @@ MonoBehaviour:
   firePoint: {fileID: 1882180545}
   line: {fileID: 143493678}
   damage: 25
-  attachPointWeapon: {fileID: 82539807}
-  leftHandPose: {fileID: 587728949}
-  rightHandPose: {fileID: 1745937678}
+  attachPointLeft: {fileID: 82539807}
+  attachPointRight: {fileID: 1273840449}
+  leftHandController: {fileID: 307198902}
+  rightHandController: {fileID: 167846266}
 --- !u!114 &835115042
 MonoBehaviour:
   m_ObjectHideFlags: 0
