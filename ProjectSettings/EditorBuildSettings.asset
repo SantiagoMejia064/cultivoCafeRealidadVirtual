@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/porConfigurar.unity
+    path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 3b334ae2b5655c345b7ed6b68b24028c, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 417bf11dc05303446a9cee72559236cd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: f873aef74596daf4cb35c9e5cf6273d9, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 536ba3cd67c67fc48bf5e02f3cdc186e, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8b7113fce11221c43bcbcea3e976b8e9, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 661ec76682703f34ea4fc336e5e139d1, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e2cfaa98ca7f67d4d9d2ecd954938f55, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 04d9e920de29b244f8e9a47773ee8987, type: 2}
   m_UseUCBPForAssetBundles: 0
