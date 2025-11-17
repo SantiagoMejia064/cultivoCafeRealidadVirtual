@@ -45853,6 +45853,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3738181026152085607, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738181026152085607, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
       propertyPath: m_TagString
       value: Canasta
       objectReference: {fileID: 0}
@@ -45869,6 +45873,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 413194333080029812, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1778911025}
+    - targetCorrespondingSourceObject: {fileID: 413194333080029812, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1571187029}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3738181026152085607, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
       insertIndex: -1
@@ -45891,6 +45898,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3738181026152085607, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1349559990}
+    - targetCorrespondingSourceObject: {fileID: 3738181026152085607, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349560001}
   m_SourcePrefab: {fileID: 100100000, guid: 24042fd7b94f31440811b9323881f0fc, type: 3}
 --- !u!1 &1233636934
 GameObject:
@@ -49917,10 +49927,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 1.634303, z: 0.25}
-  m_Center: {x: -0.0021024048, y: 0.8171515, z: 0.57}
+  m_Size: {x: 1.5, y: 1.6343026, z: 0.06465391}
+  m_Center: {x: -0.0021024297, y: 0.8171513, z: 0.66267395}
 --- !u!114 &1349559990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50066,7 +50076,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -50092,10 +50102,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1.3932768, y: 0.1, z: 1.3932767}
-  m_Center: {x: -0.0000012516975, y: 0.06, z: 0.00000008940697}
+  m_Size: {x: 1.4919323, y: 0.1756162, z: 1.4919294}
+  m_Center: {x: -0.0044857464, y: 0.023070665, z: 0.0044856225}
 --- !u!65 &1349559996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50113,10 +50123,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 1.634303, z: 1.5}
-  m_Center: {x: -0.61, y: 0.8171517, z: 0.0026640892}
+  m_Size: {x: 0.10352036, y: 1.6343029, z: 1.5}
+  m_Center: {x: -0.68324596, y: 0.8171518, z: 0.0026640794}
 --- !u!65 &1349559997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50134,10 +50144,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 1.6343027, z: 1.5}
-  m_Center: {x: 0.61, y: 0.8171517, z: 0.002664104}
+  m_Size: {x: 0.07661085, y: 1.6343026, z: 1.5}
+  m_Center: {x: 0.6966966, y: 0.8171516, z: 0.0026640794}
 --- !u!65 &1349559998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50155,10 +50165,32 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 1.6343027, z: 0.25}
-  m_Center: {x: -0.0021024048, y: 0.8171517, z: -0.57}
+  m_Size: {x: 1.5, y: 1.6343026, z: 0.07661122}
+  m_Center: {x: -0.0021024297, y: 0.8171516, z: -0.6566959}
+--- !u!64 &1349560001
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349559988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7168838378446783805, guid: 85bb58f8a51949f4881271e77c6a6895, type: 3}
 --- !u!4 &1351387412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6072337444827864894, guid: 6c4007604bc022f448fc1c1580e16882, type: 3}
@@ -58402,6 +58434,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1883318652}
   m_LocalEulerAnglesHint: {x: 30.381, y: 348.542, z: 256.408}
+--- !u!1 &1571187028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571187029}
+  m_Layer: 0
+  m_Name: Stored Fruits Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571187029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571187028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.002, y: 0.631, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1349559994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579786694
 GameObject:
   m_ObjectHideFlags: 0
@@ -65668,7 +65731,7 @@ Transform:
   m_GameObject: {fileID: 1778911024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.337, y: 1.318, z: 0.203}
+  m_LocalPosition: {x: 0.002, y: 0.631, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65683,44 +65746,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778911024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581513478314d5547a18312c70ded6c2, type: 3}
+  m_Script: {fileID: 11500000, guid: c73b5bd91aad81546a28decf5e94193a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_InteractionLayers:
-    m_Bits: 4294967295
-  m_Handedness: 0
-  m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_StartingTargetFilter: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
-  m_SocketActive: 1
-  m_InteractableHoverScale: 1
-  m_RecycleDelayTime: 1
-  m_HoverSocketSnapping: 0
-  m_SocketSnappingRadius: 0.1
-  m_SocketScaleMode: 0
-  m_FixedScale: {x: 1, y: 1, z: 1}
-  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
-  targetTag: cafe
+  socketArea: {fileID: 1778911027}
+  storedFruitsParent: {fileID: 1571187029}
+  innerRadius: 0.2
+  fruitsHeight: 0
 --- !u!135 &1778911027
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -65740,8 +65772,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8333334
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.6493221
+  m_Center: {x: 0, y: 0.18402407, z: 0.0021040442}
 --- !u!1 &1779007633
 GameObject:
   m_ObjectHideFlags: 0
