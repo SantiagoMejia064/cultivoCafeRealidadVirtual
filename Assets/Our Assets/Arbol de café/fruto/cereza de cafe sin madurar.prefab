@@ -130,6 +130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cereza de cafe sin madurar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
+      propertyPath: m_TagString
+      value: naranja
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -142,9 +146,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4154116233146086688}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6896883920864970561}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
       insertIndex: -1
@@ -152,33 +153,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8259155063258337986}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4299472070175678174}
   m_SourcePrefab: {fileID: 100100000, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
 --- !u!1 &1505843252860336284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
   m_PrefabInstance: {fileID: 1739723868851242445}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &4154116233146086688
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505843252860336284}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.95033824
-  m_Center: {x: -0.10809491, y: -0.05652927, z: 0}
 --- !u!114 &6896883920864970561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +179,8 @@ MonoBehaviour:
   requiredPullDistance: 0.2
   springStiffness: 12
   maxStretchScale: 0.15
+  branchBendBone: {fileID: 0}
+  maxBendAngle: 15
 --- !u!54 &8143554685596430782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -345,6 +330,27 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!135 &-4299472070175678174
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505843252860336284}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.94
+  m_Center: {x: -0.10073711, y: -0, z: 0.000000059604645}
 --- !u!4 &2282767392597140006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}

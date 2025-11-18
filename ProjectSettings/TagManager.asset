@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Canasta
   - cafe
+  - roja
+  - naranja
+  - verde
   layers:
   - Default
   - TransparentFX
