@@ -145,10 +145,10 @@ public class Pistola : MonoBehaviour
 
     private IEnumerator Disparo()
     {
+
         RaycastHit hit;
         bool hitInfo = Physics.Raycast(firePoint.position, firePoint.forward, out hit, 50f);
         Instantiate(ShootFx, firePoint.position, Quaternion.identity);
-
         if (hitInfo)
         {
             line.SetPosition(0, firePoint.position);
