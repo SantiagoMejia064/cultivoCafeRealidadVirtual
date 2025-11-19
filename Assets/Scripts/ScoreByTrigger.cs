@@ -52,7 +52,7 @@ public class ScoreByTrigger : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Puntos: " + score;
+            scoreText.text = "" + score;
         }
     }
 }
