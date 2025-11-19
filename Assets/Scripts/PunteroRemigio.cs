@@ -4,8 +4,7 @@ using UnityEngine;
 public class PunteroRemigio : MonoBehaviour
 {
     [Header("GameObjects")]
-    public GameObject objectToAppear1;
-    public GameObject objectToAppear2;
+    public GameObject objectToAppear;
     public GameObject objectToAppearEffect;
     public GameObject objectToDestroy;
 
@@ -15,16 +14,13 @@ public class PunteroRemigio : MonoBehaviour
     {
         if (other.CompareTag("MainCamera") && !effectActivated)
         {
-            if (objectToAppear1 != null)
-                objectToAppear1.SetActive(true);
-
-            if (objectToAppear2 != null)
-                objectToAppear2.SetActive(true);
+            if (objectToAppear != null)
+                objectToAppear.SetActive(true);
 
             if (objectToAppearEffect != null)
             {
                 objectToAppearEffect.SetActive(true);
-                StartCoroutine(DestroyEffectAfterTime(objectToAppearEffect, 0.5f));
+                StartCoroutine(DestroyEffectAfterTime(objectToAppearEffect, 1f));
             }
 
             if (objectToDestroy != null)
