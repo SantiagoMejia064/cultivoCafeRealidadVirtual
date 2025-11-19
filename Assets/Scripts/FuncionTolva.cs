@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.Events; 
+using UnityEngine.Events;
 
-public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
+public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable
 {
     [SerializeField] private Transform wheelTransform;
+    [SerializeField] private GameObject panel; // El panel que se va a mostrar
+    [SerializeField] private float angleThreshold = 90.0f; // Ángulo en el que aparece el panel
 
     public UnityEvent<float> OnWheelRotated;
 
     private float currentAngle = 0.0f;
-    private float previousAngle = 0f;
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -34,54 +35,31 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRG
         }
     }
 
-    private float CalculateTotalAngle()
-    {
-        float angleSum = 0f;
-        int count = interactorsSelecting.Count;
-        if (count == 0) return previousAngle;
-
-        Vector3 axis     = transform.right;  // eje de giro (local X)
-        Vector3 reference = transform.up;    // referencia “arriba” de la rueda
-
-        foreach (var interactor in interactorsSelecting)
-        {
-            // Vector desde el centro de la rueda hasta la mano en espacio mundo
-            Vector3 toInteractor = interactor.transform.position - transform.position;
-
-            // Proyectar en el plano perpendicular al eje para ignorar la componente a lo largo del eje
-            Vector3 projected = Vector3.ProjectOnPlane(toInteractor, axis);
-
-            // Calcular el ángulo entre la referencia y el vector proyectado, alrededor del eje
-            float angle = Vector3.SignedAngle(reference, projected, axis);
-            angleSum += angle;
-        }
-
-        return angleSum / count;
-    }
-
-
     private void RotateWheel()
     {
-        // Calcular el ángulo total actual
+        // Convertir esa dirección a un ángulo, luego rotación
         float totalAngle = FindWheelAngle();
 
-        // Diferencia respecto al ángulo calculado en el fotograma anterior
+        // Aplicar la diferencia de ángulo a la rueda
         float angleDifference = currentAngle - totalAngle;
+        wheelTransform.Rotate(transform.forward, -angleDifference, Space.World);
 
-        // Girar alrededor del eje local X (transform.right) para que se vea como una rueda real.
-        // Si ves que el sentido es inverso al deseado, cambia el signo de angleDifference.
-        wheelTransform.Rotate(transform.right, angleDifference, Space.World);
-
-        // Almacenar el ángulo para el siguiente fotograma
+        // Almacenar el ángulo para el siguiente ciclo
         currentAngle = totalAngle;
         OnWheelRotated?.Invoke(angleDifference);
+
+        // Verificar si el ángulo alcanzó el umbral para mostrar el panel
+        if (Mathf.Abs(currentAngle) >= angleThreshold && panel != null)
+        {
+            panel.SetActive(true); // Activar el panel
+        }
     }
 
     private float FindWheelAngle()
     {
-        float totalAngle = 0f;
+        float totalAngle = 0;
 
-        // Sumar el ángulo de cada mano que esté agarrando el volante
+        // Combinar las direcciones de los interactores actuales
         foreach (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor in interactorsSelecting)
         {
             Vector2 direction = FindLocalPoint(interactor.transform.position);
@@ -93,22 +71,28 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRG
 
     private Vector2 FindLocalPoint(Vector3 position)
     {
-        // Convertir la posición del interactor al espacio local
-        Vector3 localPos = transform.InverseTransformPoint(position);
-
-        // Proyectar en el plano Y-Z y normalizar.  X se descarta porque estamos rotando en torno a X.
-        return new Vector2(localPos.z, localPos.y).normalized;
+        // Convertir las posiciones de la mano a local, para poder encontrar el ángulo más fácilmente
+        return transform.InverseTransformPoint(position).normalized;
     }
 
     private float ConvertToAngle(Vector2 direction)
     {
-        // Medir el ángulo firmado respecto al eje Y local en el plano YZ
+        // Usar una dirección constante para encontrar el ángulo
         return Vector2.SignedAngle(Vector2.up, direction);
     }
 
     private float FindRotationSensitivity()
     {
-        // Si hay dos manos, sensibilidad 1/2; con una sola mano es 1
+        // Usar una sensibilidad menor con dos manos
         return 1.0f / interactorsSelecting.Count;
+    }
+
+    // Añadir un método Start para asegurarse de que el panel esté desactivado al inicio
+    private void Start()
+    {
+        if (panel != null)
+        {
+            panel.SetActive(false); // Asegúrate de que el panel está desactivado al inicio
+        }
     }
 }
