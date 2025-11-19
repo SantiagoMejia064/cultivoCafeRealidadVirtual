@@ -2,39 +2,15 @@ using UnityEngine;
 
 public class boton : MonoBehaviour
 {
-    [Header("Animación puertas")]
-    [SerializeField] private Animator puerta1;
-    [SerializeField] private Animator puerta2;
-    [SerializeField] private AudioSource sonidoPuerta;
+    [Header("Animación cilindros separador")]
+    [SerializeField] private Animator cilindro1;
+    [SerializeField] private Animator cilindro2;
 
-    private bool estadoPuertas = false;
-
-    private void AbrirPuertas()
+    public void StarAnimRodillos()
     {
-        sonidoPuerta.Play();
-        puerta1.Play("abriPuertaIzq");
-        puerta2.Play("abriPuertaDer");
+        cilindro1.Play("Separador1");
+        cilindro2.Play("Separador2");
 
     }
 
-    public void AccionPuertas()
-    {
-        if (estadoPuertas == false)
-        {
-            AbrirPuertas();
-            estadoPuertas = true;
-        }
-        else
-        {
-            CerrarPuertas();
-            estadoPuertas = false;
-        }
-    }
-
-    private void CerrarPuertas()
-    {
-        sonidoPuerta.Play();
-        puerta1.Play("cerrarPuertaIzq");
-        puerta2.Play("cerrarPuertaDer");
-    }
 }
