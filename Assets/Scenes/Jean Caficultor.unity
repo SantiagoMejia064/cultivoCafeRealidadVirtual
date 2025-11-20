@@ -25209,7 +25209,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.01
   m_MaxParticleSize: 12.95
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -25321,7 +25321,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -25374,7 +25374,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -25492,7 +25492,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.16
+      scalar: 0.62
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -25809,14 +25809,14 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.2
+      scalar: 0.45
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -26075,7 +26075,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 429
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -28824,7 +28824,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -29969,13 +29969,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607630333}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.3683201, y: -0.61225975, z: -0.6036064, w: -0.35374808}
-  m_LocalPosition: {x: 0.444, y: 1.122, z: 17.451}
-  m_LocalScale: {x: 0.27522, y: 0.27522, z: 0.27522}
+  m_LocalRotation: {x: -0.4159723, y: 0.6223714, z: -0.55631924, w: 0.3607353}
+  m_LocalPosition: {x: 0.284, y: 1.122, z: 17.451}
+  m_LocalScale: {x: 0.18277912, y: 0.18277912, z: 0.18277912}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -28.59, y: -268.627, z: 90}
+  m_LocalEulerAnglesHint: {x: -203.102, y: -82.45599, z: 92.178}
 --- !u!1 &607738562
 GameObject:
   m_ObjectHideFlags: 0
@@ -46846,7 +46846,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -90233,7 +90233,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
