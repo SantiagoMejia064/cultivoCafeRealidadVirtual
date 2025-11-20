@@ -9,13 +9,25 @@ public class InstanciadorNew : MonoBehaviour
     public float intervalo = 0.5f;         // Tiempo entre instanciaciones
 
     private float timer = 0f;              // Temporizador para el intervalo
+    private float tiempoTranscurrido = 0f; // Temporizador para el tiempo límite
+    public float tiempoLimite = 10f;       // Tiempo en segundos para desactivar la palanca
 
     void Update()
     {
+        // Contabilizamos el tiempo transcurrido para el cambio en la palanca
+        tiempoTranscurrido += Time.deltaTime;
+
+        // Si ha pasado el tiempo límite, desactivamos la palanca
+        if (tiempoTranscurrido >= tiempoLimite)
+        {
+            palanca.value = false; // Desactivar la palanca
+            tiempoTranscurrido = 0f; // Resetear el temporizador
+        }
+
         // Verificar si la palanca está activada
         if (palanca.value)
         {
-            // Contabilizar el tiempo
+            // Contabilizar el tiempo para la instanciación
             timer += Time.deltaTime;
 
             // Si ha pasado el intervalo, instanciamos el objeto
@@ -25,7 +37,6 @@ public class InstanciadorNew : MonoBehaviour
                 timer = 0f;  // Resetear el temporizador
             }
         }
-
     }
 
     // Método para instanciar el prefab en la posición deseada
