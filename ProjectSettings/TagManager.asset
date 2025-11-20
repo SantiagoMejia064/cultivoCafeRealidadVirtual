@@ -9,6 +9,7 @@ TagManager:
   - roja
   - naranja
   - verde
+  - TriggerArea
   layers:
   - Default
   - TransparentFX
