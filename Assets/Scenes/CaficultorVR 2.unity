@@ -19608,7 +19608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cilindro1: {fileID: 302849579}
   cilindro2: {fileID: 2124302741}
-  grano: {fileID: 1996483933451677062, guid: f779466c8e273354397eba982f31254c, type: 3}
+  grano: {fileID: 1996483933451677062, guid: 8fc6fa013c9f2f9458b27f03662dbd00, type: 3}
   puntoInstanciacion: {fileID: 2131132620}
   btnSiguienteSeccion: {fileID: 0}
   intervalo: 0.5
@@ -33684,7 +33684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palanca: {fileID: 1524133556}
-  prefab: {fileID: 1996483933451677062, guid: f779466c8e273354397eba982f31254c, type: 3}
+  prefab: {fileID: 1996483933451677062, guid: 8fc6fa013c9f2f9458b27f03662dbd00, type: 3}
   puntoInstanciacion: {fileID: 1825637327}
   impactEffect: {fileID: 3323387954473017891, guid: 0b912e9003fba894faa88cf964a6fb8a, type: 3}
   puntoImpacto: {fileID: 1837611532}

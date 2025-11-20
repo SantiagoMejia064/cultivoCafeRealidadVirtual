@@ -64,9 +64,13 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2734a4be40627164d912395de914571f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b8041af60208ec43bc05617fa872b9e, type: 2}
     - target: {fileID: 919132149155446097, guid: 2734a4be40627164d912395de914571f, type: 3}
       propertyPath: m_Name
-      value: granoDeCafeSinTostar
+      value: granoDeCafeSinTostado 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2734a4be40627164d912395de914571f, type: 3}
       propertyPath: m_TagString
@@ -78,17 +82,17 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2734a4be40627164d912395de914571f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8505292925509814380}
+      addedObject: {fileID: 5465225057585459499}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2734a4be40627164d912395de914571f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2618708164642768461}
+      addedObject: {fileID: 3396380852085914716}
   m_SourcePrefab: {fileID: 100100000, guid: 2734a4be40627164d912395de914571f, type: 3}
 --- !u!1 &1996483933451677062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2734a4be40627164d912395de914571f, type: 3}
   m_PrefabInstance: {fileID: 1690404976136048855}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &-8505292925509814380
+--- !u!54 &5465225057585459499
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,19 +100,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996483933451677062}
   serializedVersion: 4
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_Mass: 2
-=======
-  m_Mass: 10000
->>>>>>> Stashed changes
-=======
-  m_Mass: 10000
->>>>>>> Stashed changes
-=======
-  m_Mass: 10000
->>>>>>> Stashed changes
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -127,7 +119,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2618708164642768461
+--- !u!135 &3396380852085914716
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
