@@ -98,7 +98,11 @@ Rigidbody:
   serializedVersion: 4
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Mass: 2
+=======
+  m_Mass: 10000
+>>>>>>> Stashed changes
 =======
   m_Mass: 10000
 >>>>>>> Stashed changes
