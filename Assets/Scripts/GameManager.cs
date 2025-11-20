@@ -3,6 +3,12 @@ using UnityEngine.XR.Content.Interaction;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Seccion 1")]
+    public Animator puerta1Anim;
+
+    [Header("Seccion 2")]
+    public Animator puerta2Anim;
+
     [Header("Seccion 3")]
     public XRLever palanca;
     public Animator ducto1Anim;
