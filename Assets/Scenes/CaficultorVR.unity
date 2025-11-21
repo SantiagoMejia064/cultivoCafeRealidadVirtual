@@ -8797,7 +8797,7 @@ PrefabInstance:
       addedObject: {fileID: 1919657427}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a9b552b8d044825408c22f353326a4a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1032540614}
+      addedObject: {fileID: 1125897272}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9b552b8d044825408c22f353326a4a9, type: 3}
       insertIndex: -1
@@ -48170,10 +48170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6637a06030b97646aee5a248ccc218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "paqueteCaf\xE9Prefab": {fileID: 4803109402488950760, guid: 159c3092da28d9342a98a1fd847be2eb, type: 3}
+  "paqueteCaf\xE9Prefab": {fileID: 4065473995768332596, guid: 84d8607d6ec7c684c95afbf966d0efb9, type: 3}
   "paqueteCaf\xE9CortadoPrefab": {fileID: 1055870958651704148, guid: 4a3094bad1cdd6d4ba7ec059eedd50a0, type: 3}
   transformSubnormal: {fileID: 1919657427}
-  segundaPosicion: {fileID: 1032540614}
+  segundaPosicion: {fileID: 1125897272}
 --- !u!1 &978084753
 GameObject:
   m_ObjectHideFlags: 0
@@ -50808,37 +50808,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 114871754}
   m_LocalEulerAnglesHint: {x: 12.673, y: -161.572, z: -154.333}
---- !u!1 &1032540613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1032540614}
-  m_Layer: 0
-  m_Name: Salida
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1032540614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032540613}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.75, y: 0.914, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 977403425}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035921745
 GameObject:
   m_ObjectHideFlags: 0
@@ -54825,6 +54794,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 608849851}
   m_LocalEulerAnglesHint: {x: -2.885, y: 1451.837, z: -677.809}
+--- !u!1 &1125897271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125897272}
+  m_Layer: 0
+  m_Name: Salida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1125897272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125897271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.44, y: 0.49, z: 1.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 977403425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1128291197
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,8 +28,9 @@ public class MaquinaCortadora : MonoBehaviour
         if (other.CompareTag("Paquetecafe"))  // Si el objeto es un paquete de café
         {
             Debug.Log("entró");
+
             // Destruir el paquete original (café sin cortar)
-            Destroy(other.gameObject);
+            Destroy(other.transform.parent.gameObject);
 
             // Instanciar el paquete de café cortado en la misma posición exacta
             if (segundaPosicion != null)
