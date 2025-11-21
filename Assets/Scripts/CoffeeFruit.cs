@@ -81,11 +81,19 @@ public class CoffeeFruit : MonoBehaviour
     // ===== Eventos de agarre =====
     private void OnGrabbed(SelectEnterEventArgs args)
     {
+        if (sonido != null)
+        {
+            Debug.Log("Sonido reproducido");
+            sonido.Play();
+        }
+        else
+        {
+            Debug.LogError("No se ha asignado el AudioSource al objeto 'sonido'.");
+        }
+
         interactorTransform = args.interactorObject.transform;
         StopAllCoroutines();
         StartCoroutine(ResistAndDetachCoroutine());
-
-        sonido.Play();
     }
 
     private void OnReleased(SelectExitEventArgs args)
@@ -113,7 +121,7 @@ public class CoffeeFruit : MonoBehaviour
         }
         else
         {
-            // 🔥 Ya NO está attached → lo arrancaste
+            // Ya NO está attached → lo arrancaste
             // Al soltarlo, ahora sí cae por gravedad
             rb.isKinematic = false;
             rb.useGravity = true;

@@ -46,7 +46,7 @@ public class CoffeeTreeFruitSpawner : MonoBehaviour
                 Random.Range(0f, 360f)
             );
 
-            // 🔥 ESCALA CORREGIDA EN FUNCIÓN DEL PADRE
+            //  ESCALA CORREGIDA EN FUNCIÓN DEL PADRE
             Vector3 parentScale = point.lossyScale;
             // Evitar divisiones por 0
             parentScale.x = Mathf.Approximately(parentScale.x, 0f) ? 1f : parentScale.x;

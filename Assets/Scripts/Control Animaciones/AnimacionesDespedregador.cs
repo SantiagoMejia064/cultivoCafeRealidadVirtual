@@ -4,30 +4,32 @@ public class AnimacionesDespedregador : MonoBehaviour
 {
     // Referencias a los animadores de los objetos que tienen las animaciones
     public Animator despregadorAnimator;
-    public Animator despulpadoraAnimator; // Esta línea es la que faltaba
+    public Animator despulpadoraAnimator;
+    public Animator despulpadoraAnimator2;
     public Animator tuboRecirculadorAnimator;
     public Animator tubosConductoresAnimator;
 
-    // Start se llama al principio, puedes usarlo para iniciar las animaciones
-    void Start()
-    {
-        // Iniciar todas las animaciones al mismo tiempo
-        StartAllAnimations();
-    }
+    // Referencia al AudioSource
+    public AudioSource sonido;
 
     // Función para iniciar las animaciones
     void StartAllAnimations()
     {
-        if (despregadorAnimator != null)
-            despregadorAnimator.Play("Despregador"); // Asegúrate de que el nombre coincida con el de tu animación en el Animator
+        tubosConductoresAnimator.Play("TubosConductores");
+        despulpadoraAnimator.Play("Despulpadora");
+        despulpadoraAnimator2.Play("Despulpadora");
+        despregadorAnimator.Play("Despedregador Principal");
+        tuboRecirculadorAnimator.Play("Tubo recirculador");
+    }
 
-        if (despulpadoraAnimator != null)
-            despulpadoraAnimator.Play("Desulpadora"); // Asegúrate de que el nombre coincida con el de tu animación en el Animator
+    // Función pública para iniciar animaciones y sonido
+    public void ActivateAnimationsAndSound()
+    {
+        // Activar todas las animaciones
+        StartAllAnimations();
 
-        if (tuboRecirculadorAnimator != null)
-            tuboRecirculadorAnimator.Play("TuboRecirculador"); // Asegúrate de que el nombre coincida con el de tu animación en el Animator
-
-        if (tubosConductoresAnimator != null)
-            tubosConductoresAnimator.Play("Tubos Conductores");
+        // Reproducir sonido si está asignado
+        if (sonido != null)
+            sonido.Play();
     }
 }
