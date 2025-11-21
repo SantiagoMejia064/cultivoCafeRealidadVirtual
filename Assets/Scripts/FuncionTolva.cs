@@ -6,6 +6,7 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRB
 {
     [SerializeField] private Transform wheelTransform;
     [SerializeField] private GameObject panel; 
+    public Animator Puerta1anim; 
     [SerializeField] private float angleThreshold = 90.0f; 
 
     public UnityEvent<float> OnWheelRotated;
@@ -51,6 +52,7 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRB
         if (Mathf.Abs(totalRotation) >= angleThreshold && panel != null)
         {
             panel.SetActive(true); 
+            Puerta1anim.Play("AbrirPuerta1");
         }
     }
 
