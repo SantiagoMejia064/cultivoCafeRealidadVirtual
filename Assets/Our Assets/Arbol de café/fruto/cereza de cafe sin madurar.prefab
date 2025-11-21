@@ -62,7 +62,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2282767392597140006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6690253931490823423
+--- !u!1 &9023953384229229531
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,54 +70,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9026934228554470530}
-  - component: {fileID: 4573944718944634200}
+  - component: {fileID: 2489317219124044701}
+  - component: {fileID: 4760920424541329524}
   m_Layer: 0
-  m_Name: frutos
+  m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9026934228554470530
+--- !u!4 &2489317219124044701
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6690253931490823423}
+  m_GameObject: {fileID: 9023953384229229531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071067, w: 0.7071068}
-  m_LocalPosition: {x: -0.048103403, y: -0.47422883, z: 6.1050034}
+  m_LocalPosition: {x: -781.185, y: -86.29341, z: 922.5575}
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2282767392597140006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &4573944718944634200
+--- !u!82 &4760920424541329524
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6690253931490823423}
+  m_GameObject: {fileID: 9023953384229229531}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 42b7ebc742a0f2c4394f4c5eec60122f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.128
-  m_Pitch: 0
+  m_Volume: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 60
-  DopplerLevel: 2.06
-  MinDistance: 0.01
-  MaxDistance: 0.05
-  Pan2D: 0.18
+  Priority: 128
+  DopplerLevel: 1.81
+  MinDistance: 1
+  MaxDistance: 2.5
+  Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -181,7 +181,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.165
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -268,7 +268,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9026934228554470530}
+      addedObject: {fileID: 2489317219124044701}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b092e9a5f623fd429b5ea203ab35438, type: 3}
       insertIndex: -1
       addedObject: {fileID: 718673251742078920}
@@ -313,7 +313,7 @@ MonoBehaviour:
   maxStretchScale: 0.15
   branchBendBone: {fileID: 0}
   maxBendAngle: 15
-  sonido: {fileID: 4573944718944634200}
+  sonido: {fileID: 4760920424541329524}
 --- !u!54 &8143554685596430782
 Rigidbody:
   m_ObjectHideFlags: 0
