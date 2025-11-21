@@ -48170,7 +48170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6637a06030b97646aee5a248ccc218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "paqueteCaf\xE9Prefab": {fileID: 1427734985156101282, guid: caacd9db964f4f94f9c0d99673bedef4, type: 3}
+  "paqueteCaf\xE9Prefab": {fileID: 4803109402488950760, guid: 159c3092da28d9342a98a1fd847be2eb, type: 3}
   "paqueteCaf\xE9CortadoPrefab": {fileID: 1055870958651704148, guid: 4a3094bad1cdd6d4ba7ec059eedd50a0, type: 3}
   transformSubnormal: {fileID: 1919657427}
   segundaPosicion: {fileID: 1032540614}

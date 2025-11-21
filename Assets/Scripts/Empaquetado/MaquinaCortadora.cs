@@ -25,8 +25,9 @@ public class MaquinaCortadora : MonoBehaviour
     // Se llama cuando otro objeto entra en el collider de la máquina
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PaqueteCafe"))  // Si el objeto es un paquete de café
+        if (other.CompareTag("Paquetecafe"))  // Si el objeto es un paquete de café
         {
+            Debug.Log("entró");
             // Destruir el paquete original (café sin cortar)
             Destroy(other.gameObject);
 

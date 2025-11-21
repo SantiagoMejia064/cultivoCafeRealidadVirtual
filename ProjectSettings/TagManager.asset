@@ -14,6 +14,7 @@ TagManager:
   - LotePaquetes
   - Maquina
   - PaqueteCafe
+  - Paquetecafe
   layers:
   - Default
   - TransparentFX
