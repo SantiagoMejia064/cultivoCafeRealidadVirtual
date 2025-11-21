@@ -10,7 +10,10 @@ TagManager:
   - naranja
   - verde
   - TriggerArea
-  - agua
+  - Agua
+  - LotePaquetes
+  - Maquina
+  - PaqueteCafe
   layers:
   - Default
   - TransparentFX
