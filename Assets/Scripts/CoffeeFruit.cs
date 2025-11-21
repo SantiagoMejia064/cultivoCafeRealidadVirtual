@@ -33,6 +33,8 @@ public class CoffeeFruit : MonoBehaviour
 
     private Quaternion branchOriginalRot;
 
+    public AudioSource sonido;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -82,6 +84,8 @@ public class CoffeeFruit : MonoBehaviour
         interactorTransform = args.interactorObject.transform;
         StopAllCoroutines();
         StartCoroutine(ResistAndDetachCoroutine());
+
+        sonido.Play();
     }
 
     private void OnReleased(SelectExitEventArgs args)
