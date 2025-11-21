@@ -6,7 +6,7 @@ public class SeparacionFlotes : MonoBehaviour
     [SerializeField] private Transform destinationVerde; // Posición para el tag "verde"
     [SerializeField] private Transform destinationNaranja; // Posición para el tag "naranja"
     [SerializeField] private Transform destinationRojo; // Posición para el tag "rojo"
-    [SerializeField] private float waitTime = 3f; // Tiempo de espera en segundos antes de mover los granos
+    [SerializeField] private float waitTime = 18f; // Tiempo de espera en segundos antes de mover los granos
     [SerializeField] private float offsetRange = 0.2f; // Rango de desplazamiento aleatorio para evitar que los objetos se sobrepongan
 
     private void OnTriggerEnter(Collider other)

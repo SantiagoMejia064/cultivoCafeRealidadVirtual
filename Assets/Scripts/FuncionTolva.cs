@@ -11,6 +11,7 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRB
     public UnityEvent<float> OnWheelRotated;
 
     private float currentAngle = 0.0f;
+    private float totalRotation = 0.0f; // Total acumulado de la rotación
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -37,21 +38,28 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRB
 
     private void RotateWheel()
     {
-        // Convertir esa dirección a un ángulo, luego rotación
+        // Obtener el ángulo total de la rueda
         float totalAngle = FindWheelAngle();
 
-        // Aplicar la diferencia de ángulo a la rueda
-        float angleDifference = currentAngle - totalAngle;
-        wheelTransform.Rotate(transform.forward, -angleDifference, Space.World);
+        // Calcular la diferencia de ángulo (diferencia entre el ángulo actual y el anterior)
+        float angleDifference = totalAngle - currentAngle;
 
-        // Almacenar el ángulo para el siguiente ciclo
+        // Asegurarnos de acumular correctamente el ángulo total
+        totalRotation += angleDifference;
+
+        // Aplicar la rotación a la rueda
+        wheelTransform.Rotate(Vector3.forward, angleDifference, Space.World);
+
+        // Almacenar el ángulo actual para la siguiente iteración
         currentAngle = totalAngle;
+
+        // Llamar al evento OnWheelRotated
         OnWheelRotated?.Invoke(angleDifference);
 
-        // Verificar si el ángulo alcanzó el umbral para mostrar el panel
-        if (Mathf.Abs(currentAngle) >= angleThreshold && panel != null)
+        // Verificar si el ángulo acumulado ha superado el umbral
+        if (Mathf.Abs(totalRotation) >= angleThreshold && panel != null)
         {
-            panel.SetActive(true); // Activar el panel
+            panel.SetActive(true); // Activar el panel cuando se haya superado el umbral
         }
     }
 
