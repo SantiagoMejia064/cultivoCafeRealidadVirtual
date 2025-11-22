@@ -85,12 +85,15 @@ public class HablandoRemegio : MonoBehaviour
             audioSource.Stop(); // Detiene el audio si está sonando
         }
 
+        siguiente.SetActive(true);
+        actual.SetActive(false);
+
         // Deshabilitar el botón de omitir después de presionarlo
         if (omitirButton != null)
         {
             omitirButton.interactable = false; // Deshabilita el botón
-            siguiente.SetActive(true);
-            actual.SetActive(false);
+            //siguiente.SetActive(true);
+            //actual.SetActive(false);
             // Activar el efecto al desaparecer el objeto actual
             ActivarEfecto();
         }
