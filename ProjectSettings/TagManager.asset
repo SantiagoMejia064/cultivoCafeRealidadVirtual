@@ -15,6 +15,9 @@ TagManager:
   - Maquina
   - PaqueteCafe
   - Paquetecafe
+  - agua
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX
