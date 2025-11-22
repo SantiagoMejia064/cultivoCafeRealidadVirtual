@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.UI; // Necesario para trabajar con el botón
+using UnityEngine.UI;
 
 public class HablandoRemegio : MonoBehaviour
 {
@@ -9,16 +9,17 @@ public class HablandoRemegio : MonoBehaviour
 
     [Header("Parámetro del Animator")]
     [SerializeField] private string animationBoolName = "isTalking";
+    public GameObject siguiente;
+    public GameObject actual;
 
     // Para saber si cambió el estado del audio
     private bool wasPlaying = false;
 
     [Header("Botón de Omitir")]
-    [SerializeField] private Button omitirButton; // Referencia al botón
+    [SerializeField] private Button omitirButton;
 
     private void Reset()
     {
-        // Autoasignar referencias si el script se añade desde el inspector
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
 
@@ -26,7 +27,7 @@ public class HablandoRemegio : MonoBehaviour
             animator = GetComponent<Animator>();
 
         if (omitirButton == null)
-            omitirButton = GetComponent<Button>(); // Asume que el botón está en el mismo GameObject
+            omitirButton = GetComponent<Button>();
     }
 
     private void Update()
@@ -35,19 +36,16 @@ public class HablandoRemegio : MonoBehaviour
 
         bool isPlaying = audioSource.isPlaying;
 
-        // Solo actuamos cuando cambia el estado (para no spamear SetBool)
         if (isPlaying != wasPlaying)
         {
             wasPlaying = isPlaying;
 
             if (isPlaying)
             {
-                // Empezó a sonar el audio → activar animación
                 animator.SetBool(animationBoolName, true);
             }
             else
             {
-                // Se terminó (o se detuvo) el audio → desactivar animación
                 animator.SetBool(animationBoolName, false);
             }
         }
@@ -56,6 +54,8 @@ public class HablandoRemegio : MonoBehaviour
         if (!audioSource.isPlaying && omitirButton != null && omitirButton.interactable)
         {
             omitirButton.interactable = false; // Deshabilita el botón cuando el audio termine
+            siguiente.SetActive(true);
+            actual.SetActive(false);
         }
     }
 
@@ -82,6 +82,8 @@ public class HablandoRemegio : MonoBehaviour
         if (omitirButton != null)
         {
             omitirButton.interactable = false; // Deshabilita el botón
+            siguiente.SetActive(true);
+            actual.SetActive(false);
         }
     }
 }
