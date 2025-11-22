@@ -51,6 +51,12 @@ public class HablandoRemegio : MonoBehaviour
                 animator.SetBool(animationBoolName, false);
             }
         }
+
+        // Deshabilitar el botón cuando el audio termine de sonar
+        if (!audioSource.isPlaying && omitirButton != null && omitirButton.interactable)
+        {
+            omitirButton.interactable = false; // Deshabilita el botón cuando el audio termine
+        }
     }
 
     // Función para omitir (mute el audio, cambia el bool a falso, y deshabilita el botón)
