@@ -8,6 +8,7 @@ public class InstanciadorBoton : MonoBehaviour
     [SerializeField] private GameObject prefab;               // Prefab a instanciar (fruto de café)
     [SerializeField] private List<Transform> puntosInstanciacion; // Lista de puntos donde se instanciarán los objetos
     [SerializeField] private float intervalo = 0.5f;          // Tiempo entre instanciaciones
+    public GameObject boton; 
 
     private float timer = 0f;                                  // Temporizador para el intervalo
 
@@ -21,6 +22,8 @@ public class InstanciadorBoton : MonoBehaviour
             generandoFrutos = true;
             StartCoroutine(GenerarFrutos());
         }
+
+        boton.SetActive(true);
     }
 
     // Método para generar frutos en intervalos
