@@ -10,20 +10,34 @@ public class ScoreByTrigger : MonoBehaviour
     [Header("Puntos")]
     public int score = 0;
 
-    // Utilizamos un HashSet para evitar contar las mismas colisiones múltiples veces
     private HashSet<Collider> objetosContabilizados = new HashSet<Collider>();
+
+    [Header("Referencia a BasketSocket")]
+    private BasketSocket basketSocket;  // Referencia al script BasketSocket
 
     private void Start()
     {
+        // Si no está asignado en inspector, buscar automáticamente en el padre o raíz
+        if (basketSocket == null)
+            basketSocket = GetComponentInParent<BasketSocket>();
+
         UpdateScoreUI();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verificar si el objeto ya ha sido contabilizado
-        if (objetosContabilizados.Contains(other)) return;
+        // Verificar si la canasta está llena
+        if (basketSocket != null && basketSocket.fruitCount >= basketSocket.maxFruitCount)
+        {
+            // Canasta llena, no sumar puntos
+            return;
+        }
 
-        // Si el objeto tiene un tag relevante, le sumamos o restamos puntos
+        // Verificar si el objeto ya ha sido contabilizado
+        if (objetosContabilizados.Contains(other))
+            return;
+
+        // Sumar o restar puntos según tag
         if (other.CompareTag("roja"))
         {
             score += 10;
@@ -38,13 +52,10 @@ public class ScoreByTrigger : MonoBehaviour
         }
         else
         {
-            return; // Si no tiene tag relevante, no hace nada
+            return; // Tag no relevante, salir
         }
 
-        // Añadimos el objeto al HashSet para que no sea contado de nuevo
         objetosContabilizados.Add(other);
-
-        // Actualiza la UI de los puntos
         UpdateScoreUI();
     }
 
@@ -52,7 +63,7 @@ public class ScoreByTrigger : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "" + score;
+            scoreText.text = score.ToString();
         }
     }
 }
