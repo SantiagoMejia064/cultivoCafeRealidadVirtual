@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HablandoRemegio : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class HablandoRemegio : MonoBehaviour
     [SerializeField] private string animationBoolName = "isTalking";
     public GameObject siguiente;
     public GameObject actual;
+    public GameObject efecto; // Referencia al efecto que se activará
 
     // Para saber si cambió el estado del audio
     private bool wasPlaying = false;
@@ -28,6 +30,9 @@ public class HablandoRemegio : MonoBehaviour
 
         if (omitirButton == null)
             omitirButton = GetComponent<Button>();
+
+        if (efecto == null)
+            efecto = transform.Find("Efecto").gameObject; // Asegúrate de asignar el efecto en el editor o con un nombre específico
     }
 
     private void Update()
@@ -56,6 +61,8 @@ public class HablandoRemegio : MonoBehaviour
             omitirButton.interactable = false; // Deshabilita el botón cuando el audio termine
             siguiente.SetActive(true);
             actual.SetActive(false);
+            // Activar el efecto al desaparecer el objeto actual
+            ActivarEfecto();
         }
     }
 
@@ -84,6 +91,18 @@ public class HablandoRemegio : MonoBehaviour
             omitirButton.interactable = false; // Deshabilita el botón
             siguiente.SetActive(true);
             actual.SetActive(false);
+            // Activar el efecto al desaparecer el objeto actual
+            ActivarEfecto();
         }
     }
+
+    // Activar el efecto y desactivarlo después de 1 segundo
+    private void ActivarEfecto()
+    {
+        if (efecto != null)
+        {
+            efecto.SetActive(true); // Activa el efecto
+        }
+    }
+
 }

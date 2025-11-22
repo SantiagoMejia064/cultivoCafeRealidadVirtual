@@ -30,7 +30,7 @@ public class PunteroRemigio : MonoBehaviour
         }
     }
 
-    // CORRECTA: Recibe el objeto a eliminar por parámetro
+    // Recibe el objeto a eliminar por parámetro
     private IEnumerator DestroyEffectAfterTime(GameObject effectObject, float time)
     {
         yield return new WaitForSeconds(time);

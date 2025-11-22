@@ -45,6 +45,6 @@ public class MaquinaCortadora : MonoBehaviour
     // Para realizar una prueba inicial
     void Start()
     {
-        InstanciarLoteDeCafe();  // Instanciar un lote de cafés sin cortar en la posición inicial al inicio
+        //InstanciarLoteDeCafe();  // Instanciar un lote de cafés sin cortar en la posición inicial al inicio
     }
 }
