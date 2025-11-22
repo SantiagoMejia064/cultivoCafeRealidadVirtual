@@ -12,7 +12,11 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRB
     public UnityEvent<float> OnWheelRotated;
 
     private float currentAngle = 0.0f;
-    private float totalRotation = 0.0f; 
+    private float totalRotation = 0.0f;
+
+    public AudioSource Audio;
+    public AudioSource Audio2;
+
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
@@ -48,11 +52,13 @@ public class FuncionTolva : UnityEngine.XR.Interaction.Toolkit.Interactables.XRB
         currentAngle = totalAngle;
 
         OnWheelRotated?.Invoke(angleDifference);
+        Audio.Play();
 
         if (Mathf.Abs(totalRotation) >= angleThreshold && panel != null)
         {
             panel.SetActive(true); 
-            Puerta1anim.Play("AbrirPuerta1");
+            Puerta1anim.Play("AbrirPuerta");
+            Audio2.Play();
         }
     }
 

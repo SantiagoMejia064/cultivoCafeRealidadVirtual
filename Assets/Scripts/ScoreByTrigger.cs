@@ -17,6 +17,11 @@ public class ScoreByTrigger : MonoBehaviour
     private BasketSocket basketSocket;  // Referencia al script BasketSocket
 
     [SerializeField] private GameObject logroRecolectorEntusiasta;
+    [SerializeField] private GameObject logroRcolectorConseguido;
+
+    public float timerLogro = 0f;
+    public float tiempoLimiteLogro = 5f;
+
 
     private void Start()
     {
@@ -32,6 +37,16 @@ public class ScoreByTrigger : MonoBehaviour
         if(score >= 100)
         {
             logroRecolectorEntusiasta.SetActive(true);
+
+            timerLogro += Time.deltaTime;
+            if(timerLogro >= tiempoLimiteLogro)
+            {
+                logroRecolectorEntusiasta.SetActive(false);
+
+                logroRcolectorConseguido.SetActive(true);
+
+            }
+
         }
     }
 
