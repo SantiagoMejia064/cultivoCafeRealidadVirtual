@@ -8,6 +8,7 @@ public class cambioColorCafe : MonoBehaviour
     private Material materialOriginal;        // Material original del objeto
     private Renderer rend;                    // Referencia al Renderer del objeto
     private bool haCambiadoMaterial = false;  // Verifica si el material ya fue cambiado
+    
 
     void Start()
     {
@@ -19,12 +20,13 @@ public class cambioColorCafe : MonoBehaviour
         {
             materialOriginal = rend.material;
         }
+
     }
 
     // Cuando el objeto entra en el trigger
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("TriggerArea") && !haCambiadoMaterial) // Verifica si el objeto está entrando en un área específica (con el tag "TriggerArea")
+        if (other.CompareTag("TriggerArea") && !haCambiadoMaterial) // Verifica si el objeto estï¿½ entrando en un ï¿½rea especï¿½fica (con el tag "TriggerArea")
         {
             StartCoroutine(CambiarMaterial());
         }
@@ -35,11 +37,11 @@ public class cambioColorCafe : MonoBehaviour
         // Espera el tiempo especificado antes de cambiar el material
         yield return new WaitForSeconds(tiempoAntesDeCambiar);
 
-        // Cambiar el material a uno nuevo si no ha cambiado aún
+        // Cambiar el material a uno nuevo si no ha cambiado aï¿½n
         if (rend != null && !haCambiadoMaterial)
         {
             rend.material = materialNuevo;  // Cambiar al nuevo material
-            haCambiadoMaterial = true; // Evitar que se cambie más de una vez
+            haCambiadoMaterial = true; // Evitar que se cambie mï¿½s de una vez
         }
     }
 }

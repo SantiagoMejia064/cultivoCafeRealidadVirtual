@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class ScoreByTrigger : MonoBehaviour
 {
@@ -15,18 +16,28 @@ public class ScoreByTrigger : MonoBehaviour
     [Header("Referencia a BasketSocket")]
     private BasketSocket basketSocket;  // Referencia al script BasketSocket
 
+    [SerializeField] private GameObject logroRecolectorEntusiasta;
+
     private void Start()
     {
-        // Si no está asignado en inspector, buscar automáticamente en el padre o raíz
+        // Si no estï¿½ asignado en inspector, buscar automï¿½ticamente en el padre o raï¿½z
         if (basketSocket == null)
             basketSocket = GetComponentInParent<BasketSocket>();
 
         UpdateScoreUI();
     }
 
+    void Update()
+    {
+        if(score >= 100)
+        {
+            logroRecolectorEntusiasta.SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        // Verificar si la canasta está llena
+        // Verificar si la canasta estï¿½ llena
         if (basketSocket != null && basketSocket.fruitCount >= basketSocket.maxFruitCount)
         {
             // Canasta llena, no sumar puntos
@@ -37,7 +48,7 @@ public class ScoreByTrigger : MonoBehaviour
         if (objetosContabilizados.Contains(other))
             return;
 
-        // Sumar o restar puntos según tag
+        // Sumar o restar puntos segï¿½n tag
         if (other.CompareTag("roja"))
         {
             score += 10;
